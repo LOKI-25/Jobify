@@ -7,6 +7,9 @@ const attachCookie = ({ res, token }) => {
     // secure: process.env.NODE_ENV === 'production',
     secure: true,
   });
+  console.log("Generated Cookie in attachcookie.js");
+  console.log(res.cookie);
+  
 };
 
 export default attachCookie;

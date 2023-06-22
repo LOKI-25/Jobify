@@ -3,6 +3,8 @@ import { UnAuthenticatedError } from '../errors/index.js';
 
 const auth = async (req, res, next) => {
   const token = req.cookies.token;
+  console.log("in Auth.js line 5");
+  console.log(req);
   console.log(" in auth.js line 6 ???????????"+token);
   if (!token) {
     throw new UnAuthenticatedError('Authentication Invalid??????????????(no token)');

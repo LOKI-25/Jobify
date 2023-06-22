@@ -8,7 +8,7 @@ const attachCookie = ({ res, token }) => {
     secure: true,
   });
   console.log("Generated Cookie in attachcookie.js");
-  console.log(res.cookie);
+  console.log(res);
   
 };
 

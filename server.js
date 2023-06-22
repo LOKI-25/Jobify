@@ -1,6 +1,7 @@
 import express from 'express';
 const app = express();
 import dotenv from 'dotenv';
+import cors from 'cors';
 dotenv.config();
 import 'express-async-errors';
 import morgan from 'morgan';
@@ -38,7 +39,7 @@ app.use(helmet());
 app.use(xss());
 app.use(mongoSanitize());
 app.use(cookieParser());
-
+app.use(cors());
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/jobs', authenticateUser, jobsRouter);
 

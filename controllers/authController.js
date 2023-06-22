@@ -45,6 +45,8 @@ const login = async (req, res) => {
   console.log("Token genrated in authcontroller.js in line 45 is "+token);
   attachCookie({ res, token });
   console.log("Cookie is attached");
+  console.log("RESPONSE FROM LOGIN CONTROLLER line48 in authcontroller.js"+res);
+
   user.password = undefined;
 
   res.status(StatusCodes.OK).json({ user, location: user.location });

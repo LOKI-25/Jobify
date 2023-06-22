@@ -42,8 +42,9 @@ const login = async (req, res) => {
     throw new UnAuthenticatedError('Invalid Credentials');
   }
   const token = user.createJWT();
-  console.log("Token genrated in authcontroller.js in line 45 is "+token)
+  console.log("Token genrated in authcontroller.js in line 45 is "+token);
   attachCookie({ res, token });
+  console.log("Cookie is attached");
   user.password = undefined;
 
   res.status(StatusCodes.OK).json({ user, location: user.location });

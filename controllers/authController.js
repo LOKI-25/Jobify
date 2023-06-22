@@ -47,7 +47,9 @@ const login = async (req, res) => {
   console.log("Cookie is attached");
   console.log("RESPONSE FROM LOGIN CONTROLLER line48 in authcontroller.js");
   console.log(res.set-cookie)
-  req.headers.authorization = `Bearer ${token}`;
+  req.headers.authorization = token;
+  console.log(`after adding to header `);
+  console.log(req.headers);
 
   user.password = undefined;
 

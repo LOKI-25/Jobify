@@ -2,7 +2,7 @@ import jwt from 'jsonwebtoken';
 import { UnAuthenticatedError } from '../errors/index.js';
 
 const auth = async (req, res, next) => {
-  const token = req.headers.authorization;
+  const token = req.cookies.token;
   console.log("in Auth.js line 5");
   console.log(" in auth.js line 6 ???????????"+token);
   if (!token) {

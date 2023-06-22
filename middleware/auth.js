@@ -3,8 +3,9 @@ import { UnAuthenticatedError } from '../errors/index.js';
 
 const auth = async (req, res, next) => {
   const token = req.cookies.token;
+  console.log("???????????"+token);
   if (!token) {
-    throw new UnAuthenticatedError('Authentication Invalid');
+    throw new UnAuthenticatedError('Authentication Invalid??????????????(no token)');
   }
   try {
     const payload = jwt.verify(token, 'jwtSecret');

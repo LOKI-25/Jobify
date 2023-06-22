@@ -1,8 +1,10 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express from 'express';
 const app = express();
-import dotenv from 'dotenv';
+
 import cors from 'cors';
-dotenv.config();
+
 import 'express-async-errors';
 import morgan from 'morgan';
 import { dirname } from 'path';

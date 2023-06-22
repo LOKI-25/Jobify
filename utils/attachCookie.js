@@ -5,7 +5,7 @@ const attachCookie = ({ res, token }) => {
     httpOnly: false,
     expires: new Date(Date.now() + oneDay),
     // secure: process.env.NODE_ENV === 'production',
-    secure: true,
+    secure: false,
   });
   console.log("Generated Cookie in attachcookie.js");
   console.log(res);

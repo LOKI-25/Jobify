@@ -3,6 +3,7 @@ const attachCookie = ({ res, token }) => {
 
   res.cookie('token', token, {
     domain: 'jobify-ujf0.onrender.com',
+    path:'/',
     httpOnly: false,
     expires: new Date(Date.now() + oneDay),
     // secure: process.env.NODE_ENV === 'production',
